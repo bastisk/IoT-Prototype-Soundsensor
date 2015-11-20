@@ -46,7 +46,7 @@ while True:
 			value =  audioop.max(data, 2)
 			if(value > 0): 
 				vu = math.log10(value) * 20
-				put_status(openhab_host, openhab_port, 'VolumeSensor', str(value))
+				put_status(openhab_host, openhab_port, 'VolumeSensor', str(vu))
 		except audioop.error, e:
 			if e.message != "not a whole number of frames":
 				raise e
