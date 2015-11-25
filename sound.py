@@ -47,6 +47,7 @@ while True:
 			if(value > 0): 
 				vu = math.log10(value) * 20
 				put_status(openhab_host, openhab_port, 'VolumeSensor', str(vu))
+				s = 'Soundsensor started successfully!'
 		except audioop.error, e:
 			if e.message != "not a whole number of frames":
 				raise e
